@@ -15,7 +15,9 @@ eureka:
     prefer-ip-address: true
     metadata-map:
       user.name: ${security.user.name}
-      user.password: ${security.user.password}
+      user.password: ${security.user.password}    
+#eureka.instance.metadataMap.zone=tianjin
+#eureka.instance.metadataMap.instanceId=${spring.application.name}:${random.value}
   client:
     service-url:
       defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@registry:8761/eureka/

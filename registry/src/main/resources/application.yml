@@ -4,6 +4,8 @@ server:
 eureka:
   instance:
     hostname: registry
+#    health-check-url-path: ${server.context-path}/health
+#    status-page-url-path: ${server.context-path}/info
   client:
     service-url:
       defaultZone: http://${security.user.name}:${security.user.password}@eurakaBackOne:8762/eureka/
