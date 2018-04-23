@@ -1,0 +1,14 @@
+server:
+  port: 8762
+
+eureka:
+  instance:
+    hostname: eurakaBackOne
+  client:
+    serviceUrl:
+      defaultZone: http://${security.user.name}:${security.user.password}@registry:8761/eureka/
+
+security:
+  user:
+    name: user
+    password: ${REGISTRY_SERVER_PASSWORD:password}

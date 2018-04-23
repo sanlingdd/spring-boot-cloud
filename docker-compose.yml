@@ -9,6 +9,10 @@ services:
     image: spring-boot-cloud/registry
     ports:
       - "8761:8761"
+  eurakaBackOne:
+    image: spring-boot-cloud/eurakaBackOne
+    ports:
+      - "8762:8762"
   config:
     image: spring-boot-cloud/config
     ports:
